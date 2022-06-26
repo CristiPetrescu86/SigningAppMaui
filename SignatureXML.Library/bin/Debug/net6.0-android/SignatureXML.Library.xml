@@ -1,0 +1,3454 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SignatureXML.Library</name>
+    </assembly>
+    <members>
+        <member name="T:SignatureXML.Library.AllDataObjectsTimeStampCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.AllDataObjectsTimeStampCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.AllDataObjectsTimeStampCollection.Add(SignatureXML.Library.TimeStamp)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.AllDataObjectsTimeStampCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.Cert">
+            <summary>
+            This class contains certificate identification information
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.Cert.CertDigest">
+            <summary>
+            The element CertDigest contains the digest of one of the
+            certificates referenced in the sequence
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.Cert.IssuerSerial">
+            <summary>
+            The element IssuerSerial contains the identifier of one of the
+            certificates referenced in the sequence. Should the
+            X509IssuerSerial element appear in the signature to denote the same
+            certificate, its value MUST be consistent with the corresponding
+            IssuerSerial element.
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.Cert.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.Cert.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.Cert.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.Cert.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CertCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CertCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.CertCollection.Add(SignatureXML.Library.Cert)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CertCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CertificateValues">
+            <summary>
+            The CertificateValues element contains the full set of certificates
+            that have been used to validate	the electronic signature, including the
+            signer's certificate. However, it is not necessary to include one of
+            those certificates into this property, if the certificate is already
+            present in the ds:KeyInfo element of the signature.
+            In fact, both the signer certificate (referenced in the mandatory
+            SigningCertificate property element) and all certificates referenced in
+            the CompleteCertificateRefs property element must be present either in
+            the ds:KeyInfo element of the signature or in the CertificateValues
+            property element.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CertificateValues.Id">
+            <summary>
+            Optional Id of the certificate values element
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CertificateValues.EncapsulatedX509CertificateCollection">
+            <summary>
+            A collection of encapsulated X509 certificates
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CertificateValues.OtherCertificateCollection">
+            <summary>
+            Collection of other certificates
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CertificateValues.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CertificateValues.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CertificateValues.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.CertificateValues.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CertifiedRole">
+            <summary>
+            The CertifiedRoles element contains one or more wrapped attribute
+            certificates for the signer
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CertifiedRole.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="T:SignatureXML.Library.CertifiedRoleCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CertifiedRoleCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.CertifiedRoleCollection.Add(SignatureXML.Library.CertifiedRole)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CertifiedRoleCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CertifiedRoles">
+            <summary>
+            The CertifiedRoles element contains one or more wrapped attribute
+            certificates for the signer
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CertifiedRoles.CertifiedRoleCollection">
+            <summary>
+            Collection of certified roles
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CertifiedRoles.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CertifiedRoles.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CertifiedRoles.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.CertifiedRoles.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CertRefs">
+            <summary>
+            The CertRefs element contains a collection of Cert elements
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CertRefs.CertCollection">
+            <summary>
+            Collection of Certs
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CertRefs.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CertRefs.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CertRefs.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.CertRefs.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.ClaimedRole">
+            <summary>
+            This class contains a roles claimed by the signer but not it is not a
+            certified role
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.ClaimedRole.AnyXmlElement">
+            <summary>
+            The generic XML element that represents a claimed role
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.ClaimedRole.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.ClaimedRole.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.ClaimedRole.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.ClaimedRole.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.ClaimedRoleCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.ClaimedRoleCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.ClaimedRoleCollection.Add(SignatureXML.Library.ClaimedRole)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.ClaimedRoleCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.ClaimedRoles">
+            <summary>
+            The ClaimedRoles element contains a sequence of roles claimed by
+            the signer but not certified. Additional contents types may be
+            defined on a domain application basis and be part of this element.
+            The namespaces given to the corresponding XML schemas will allow
+            their unambiguous identification in the case these roles use XML.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.ClaimedRoles.ClaimedRoleCollection">
+            <summary>
+            Collection of claimed roles
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.ClaimedRoles.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.ClaimedRoles.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.ClaimedRoles.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.ClaimedRoles.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CommitmentTypeIndication">
+            <summary>
+            The commitment type can be indicated in the electronic signature
+            by either explicitly using a commitment type indication in the
+            electronic signature or implicitly or explicitly from the semantics
+            of the signed data object.
+            If the indicated commitment type is explicit by means of a commitment
+            type indication in the electronic signature, acceptance of a verified
+            signature implies acceptance of the semantics of that commitment type.
+            The semantics of explicit commitment types indications shall be
+            specified either as part of the signature policy or may be registered
+            for	generic use across multiple policies.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CommitmentTypeIndication.CommitmentTypeId">
+            <summary>
+            The CommitmentTypeId element univocally identifies the type of commitment made by the signer.
+            A number of commitments have been already identified and assigned corresponding OIDs.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CommitmentTypeIndication.ObjectReferenceCollection">
+            <summary>
+            Collection of object references
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CommitmentTypeIndication.AllSignedDataObjects">
+            <summary>
+            If all the signed data objects share the same commitment, the
+            AllSignedDataObjects empty element MUST be present.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CommitmentTypeIndication.CommitmentTypeQualifiers">
+            <summary>
+            The CommitmentTypeQualifiers element provides means to include additional
+            qualifying information on the commitment made by the signer.
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeIndication.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeIndication.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeIndication.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeIndication.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CommitmentTypeIndicationCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CommitmentTypeIndicationCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeIndicationCollection.Add(SignatureXML.Library.CommitmentTypeIndication)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeIndicationCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CommitmentTypeQualifier">
+            <summary>
+            The CommitmentTypeQualifiers element provides means to include
+            additional qualifying information on the commitment made by the signer
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CommitmentTypeQualifier.AnyXmlElement">
+            <summary>
+            The generic XML element that represents a commitment type qualifier
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeQualifier.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeQualifier.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeQualifier.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeQualifier.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CommitmentTypeQualifierCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CommitmentTypeQualifierCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeQualifierCollection.Add(SignatureXML.Library.CommitmentTypeQualifier)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeQualifierCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CommitmentTypeQualifiers">
+            <summary>
+            The CommitmentTypeQualifier element provides means to include
+            additional qualifying information on the commitment made by the signer
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CommitmentTypeQualifiers.CommitmentTypeQualifierCollection">
+            <summary>
+            Collection of commitment type qualifiers
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeQualifiers.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeQualifiers.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeQualifiers.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.CommitmentTypeQualifiers.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CompleteCertificateRefs">
+            <summary>
+            This clause defines the XML element containing the sequence of
+            references to the full set of CA certificates that have been used
+            to validate the electronic signature up to (but not including) the
+            signer's certificate. This is an unsigned property that qualifies
+            the signature.
+            An XML electronic signature aligned with the XAdES standard may
+            contain at most one CompleteCertificateRefs element.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CompleteCertificateRefs.Id">
+            <summary>
+            The optional Id attribute can be used to make a reference to the CompleteCertificateRefs element
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CompleteCertificateRefs.CertRefs">
+            <summary>
+            The CertRefs element contains a sequence of Cert elements, incorporating the
+            digest of each certificate and optionally the issuer and serial number identifier.
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CompleteCertificateRefs.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CompleteCertificateRefs.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CompleteCertificateRefs.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.CompleteCertificateRefs.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CompleteRevocationRefs">
+            <summary>
+            This clause defines the XML element containing a full set of
+            references to the revocation data that have been used in the
+            validation of the signer and CA certificates.
+            This is an unsigned property that qualifies the signature.
+            The XML electronic signature aligned with the present document
+            MAY contain at most one CompleteRevocationRefs element.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CompleteRevocationRefs.Id">
+            <summary>
+            The optional Id attribute can be used to make a reference to the CompleteRevocationRefs element
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CompleteRevocationRefs.CRLRefs">
+            <summary>
+            Sequences of references to CRLs
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CompleteRevocationRefs.OCSPRefs">
+            <summary>
+            Sequences of references to OCSP responses
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CompleteRevocationRefs.OtherRefs">
+            <summary>
+            Other references to alternative forms of revocation data
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CompleteRevocationRefs.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CompleteRevocationRefs.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CompleteRevocationRefs.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.CompleteRevocationRefs.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CounterSignatureCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CounterSignatureCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.CounterSignatureCollection.Add(SignatureXML.Library.SignedXml)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CounterSignatureCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CRLIdentifier">
+            <summary>
+            This class includes the issuer (Issuer element), the time when the CRL
+            was issued (IssueTime element) and optionally the number of the CRL
+            (Number element).
+            The Identifier element can be dropped if the CRL could be inferred from
+            other information. Its URI attribute could serve to	indicate where the
+            identified CRL is archived.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CRLIdentifier.UriAttribute">
+            <summary>
+            The optional URI attribute could serve to indicate where the OCSP
+            response identified is archived.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CRLIdentifier.Issuer">
+            <summary>
+            Issuer of the CRL
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CRLIdentifier.IssueTime">
+            <summary>
+            Date of issue of the CRL
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CRLIdentifier.Number">
+            <summary>
+            Optional number of the CRL
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CRLIdentifier.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CRLIdentifier.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CRLIdentifier.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.CRLIdentifier.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CRLRef">
+            <summary>
+            This class contains information about a Certificate Revocation List (CRL)
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CRLRef.CertDigest">
+            <summary>
+            The digest of the entire DER encoded
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CRLRef.CRLIdentifier">
+            <summary>
+            CRLIdentifier is a set of data including the issuer, the time when
+            the CRL was issued and optionally the number of the CRL.
+            The Identifier element can be dropped if the CRL could be inferred
+            from other information.
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CRLRef.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CRLRef.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CRLRef.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.CRLRef.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CRLRefCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CRLRefCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.CRLRefCollection.Add(SignatureXML.Library.CRLRef)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CRLRefCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CRLRefs">
+            <summary>
+            Class that contains a collection of CRL references
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CRLRefs.CRLRefCollection">
+            <summary>
+            Collection of 
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CRLRefs.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CRLRefs.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CRLRefs.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.CRLRefs.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CRLValue">
+            <summary>
+            This class consist of a sequence of at least one Certificate Revocation
+            List. Each EncapsulatedCRLValue will contain the base64 encoding of a
+            DER-encoded X509 CRL.
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CRLValue.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="T:SignatureXML.Library.CRLValueCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CRLValueCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.CRLValueCollection.Add(SignatureXML.Library.CRLValue)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CRLValueCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CRLValues">
+            <summary>
+            This class contains a collection of CRL values
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.CRLValues.CRLValueCollection">
+            <summary>
+            Collection of CRLValues
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CRLValues.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.CRLValues.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.CRLValues.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.CRLValues.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.DataObjectFormat">
+            <summary>
+            The DataObjectFormat element provides information that describes the
+            format of the signed data object. This element must be present when it
+            is mandatory to present the signed data object to human users on
+            verification.
+            This is a signed property that qualifies one specific signed data
+            object. In consequence, a XAdES signature may contain more than one
+            DataObjectFormat elements, each one qualifying one signed data object.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.DataObjectFormat.ObjectReferenceAttribute">
+            <summary>
+            The mandatory ObjectReference attribute refers to the Reference element
+            of the signature corresponding with the data object qualified by this
+            property.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.DataObjectFormat.Description">
+            <summary>
+            Textual information related to the signed data object
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.DataObjectFormat.ObjectIdentifier">
+            <summary>
+            An identifier indicating the type of the signed data object
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.DataObjectFormat.MimeType">
+            <summary>
+            An indication of the MIME type of the signed data object
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.DataObjectFormat.Encoding">
+            <summary>
+            An indication of the encoding format of the signed data object
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.DataObjectFormat.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.DataObjectFormat.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.DataObjectFormat.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.DataObjectFormat.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.DataObjectFormatCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.DataObjectFormatCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.DataObjectFormatCollection.Add(SignatureXML.Library.DataObjectFormat)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.DataObjectFormatCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.DigestAlgAndValueType">
+            <summary>
+            This class indicates the algortithm used to calculate the digest and
+            the digest value itself
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.DigestAlgAndValueType.TagName">
+            <summary>
+            The name of the element when serializing
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.DigestAlgAndValueType.DigestMethod">
+            <summary>
+            Indicates the digest algorithm
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.DigestAlgAndValueType.DigestValue">
+            <summary>
+            Contains the value of the digest
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.DigestAlgAndValueType.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.DigestAlgAndValueType.#ctor(System.String)">
+            <summary>
+            Constructor with TagName
+            </summary>
+            <param name="tagName">Name of the tag when serializing with GetXml</param>
+        </member>
+        <member name="M:SignatureXML.Library.DigestAlgAndValueType.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.DigestAlgAndValueType.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.DigestAlgAndValueType.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.DigestMethod">
+            <summary>
+            DigestMethod indicates the digest algorithm
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.DigestMethod.Algorithm">
+            <summary>
+            Contains the digest algorithm
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.DigestMethod.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.DigestMethod.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.DigestMethod.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.DigestMethod.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.DocumentationReference">
+            <summary>
+            DocumentationReference points to further explanatory documentation
+            of the object identifier
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.DocumentationReference.DocumentationReferenceUri">
+            <summary>
+            Pointer to further explanatory documentation of the object identifier
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.DocumentationReference.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.DocumentationReference.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.DocumentationReference.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.DocumentationReference.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.DocumentationReferenceCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.DocumentationReferenceCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.DocumentationReferenceCollection.Add(SignatureXML.Library.DocumentationReference)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.DocumentationReferenceCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.DocumentationReferences">
+            <summary>
+            This class contains a collection of DocumentationReferences
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.DocumentationReferences.DocumentationReferenceCollection">
+            <summary>
+            Collection of documentation references
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.DocumentationReferences.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.DocumentationReferences.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.DocumentationReferences.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.DocumentationReferences.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.EncapsulatedPKIData">
+            <summary>
+            EncapsulatedPKIData is used to incorporate a piece of PKI data
+            into an XML structure whereas the PKI data is encoded using an ASN.1
+            encoding mechanism. Examples of such PKI data that are widely used at
+            the time include X509 certificates and revocation lists, OCSP responses,
+            attribute certificates and time-stamps.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.EncapsulatedPKIData.TagName">
+            <summary>
+            The name of the element when serializing
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.EncapsulatedPKIData.Id">
+            <summary>
+            The optional ID attribute can be used to make a reference to an element
+            of this data type.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.EncapsulatedPKIData.PkiData">
+            <summary>
+            Base64 encoded content of this data type 
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.EncapsulatedPKIData.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.EncapsulatedPKIData.#ctor(System.String)">
+            <summary>
+            Constructor with TagName
+            </summary>
+            <param name="tagName">Name of the tag when serializing with GetXml</param>
+        </member>
+        <member name="M:SignatureXML.Library.EncapsulatedPKIData.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.EncapsulatedPKIData.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.EncapsulatedPKIData.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.EncapsulatedX509Certificate">
+            <summary>
+            The EncapsulatedX509Certificate element is able to contain the
+            base64 encoding of a DER-encoded X.509 certificate
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.EncapsulatedX509Certificate.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="T:SignatureXML.Library.EncapsulatedX509CertificateCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.EncapsulatedX509CertificateCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.EncapsulatedX509CertificateCollection.Add(SignatureXML.Library.EncapsulatedX509Certificate)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.EncapsulatedX509CertificateCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.HashDataInfo">
+            <summary>
+            The HashDataInfo class contains a uri attribute referencing a data object
+            and a ds:Transforms element indicating the transformations to make to this
+            data object.
+            The sequence of HashDataInfo elements will be used to produce the input of
+            the hash computation process whose result will be included in the
+            timestamp request to be sent to the TSA.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.HashDataInfo.UriAttribute">
+            <summary>
+            Uri referencing a data object
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.HashDataInfo.Transforms">
+            <summary>
+            Transformations to make to this data object
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.HashDataInfo.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.HashDataInfo.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.HashDataInfo.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.HashDataInfo.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.HashDataInfoCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.HashDataInfoCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.HashDataInfoCollection.Add(SignatureXML.Library.HashDataInfo)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.HashDataInfoCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.KnownQualifier">
+            <summary>
+            Possible values for Qualifier
+            </summary>
+        </member>
+        <member name="F:SignatureXML.Library.KnownQualifier.Uninitalized">
+            <summary>
+            Value has not been set
+            </summary>
+        </member>
+        <member name="F:SignatureXML.Library.KnownQualifier.OIDAsURI">
+            <summary>
+            OID encoded as Uniform Resource Identifier (URI).
+            </summary>
+        </member>
+        <member name="F:SignatureXML.Library.KnownQualifier.OIDAsURN">
+            <summary>
+            OID encoded as Uniform Resource Name (URN)
+            </summary>
+        </member>
+        <member name="T:SignatureXML.Library.Identifier">
+            <summary>
+            The Identifier element contains a permanent identifier. Once assigned the
+            identifier can never be re-assigned	again. It supports both the mechanism
+            that is used to identify objects in ASN.1 and the mechanism that is
+            usually used to identify objects in an XML environment.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.Identifier.Qualifier">
+            <summary>
+            The optional Qualifier attribute can be used to provide a hint about the
+            applied encoding (values OIDAsURN or OIDAsURI)
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.Identifier.IdentifierUri">
+            <summary>
+            Identification of the XML environment object
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.Identifier.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.Identifier.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.Identifier.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.Identifier.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.IndividualDataObjectsTimeStampCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.IndividualDataObjectsTimeStampCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.IndividualDataObjectsTimeStampCollection.Add(SignatureXML.Library.TimeStamp)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.IndividualDataObjectsTimeStampCollection.Add(System.String)">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <param name="tagName">Name of the tag when serializing into XML using GetXml()</param>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.IssuerSerial">
+            <summary>
+            The element IssuerSerial contains the identifier of one of the
+            certificates referenced in the sequence
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.IssuerSerial.X509IssuerName">
+            <summary>
+            Name of the X509 certificate issuer
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.IssuerSerial.X509SerialNumber">
+            <summary>
+            Serial number of the X509 certificate
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.IssuerSerial.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.IssuerSerial.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.IssuerSerial.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.IssuerSerial.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.NoticeNumberCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.NoticeNumberCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.NoticeNumberCollection.Add(System.Int32)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.NoticeNumberCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.NoticeNumbers">
+            <summary>
+            This class contains identifying numbers for a group of textual statements
+            so that the XAdES based application can get the explicit notices from a
+            notices file
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.NoticeNumbers.NoticeNumberCollection">
+            <summary>
+            Collection of notice numbers
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.NoticeNumbers.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.NoticeNumbers.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.NoticeNumbers.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.NoticeNumbers.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.NoticeRef">
+            <summary>
+            The NoticeRef element names an organization and identifies by
+            numbers a group of textual statements prepared by that organization,
+            so that the application could get the explicit notices from a notices file.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.NoticeRef.Organization">
+            <summary>
+            Organization issuing the signature policy
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.NoticeRef.NoticeNumbers">
+            <summary>
+            Numerical identification of textual statements prepared by the organization,
+            so that the application can get the explicit notices from a notices file.
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.NoticeRef.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.NoticeRef.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.NoticeRef.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.NoticeRef.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.ObjectIdentifier">
+            <summary>
+            ObjectIdentifier allows the specification of an unique and permanent
+            object of an object and some additional information about the nature of
+            the	data object
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.ObjectIdentifier.TagName">
+            <summary>
+            The name of the element when serializing
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.ObjectIdentifier.Identifier">
+            <summary>
+            Specification of an unique and permanent identifier
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.ObjectIdentifier.Description">
+            <summary>
+            Textual description of the nature of the data object
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.ObjectIdentifier.DocumentationReferences">
+            <summary>
+            References to documents where additional information about the
+            nature of the data object can be found
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.ObjectIdentifier.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.ObjectIdentifier.#ctor(System.String)">
+            <summary>
+            Constructor with TagName
+            </summary>
+            <param name="tagName">Name of the tag when serializing with GetXml</param>
+        </member>
+        <member name="M:SignatureXML.Library.ObjectIdentifier.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.ObjectIdentifier.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.ObjectIdentifier.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.ObjectReference">
+            <summary>
+            This class refers to one ds:Reference element of the ds:SignedInfo
+            corresponding with one data object qualified by this property.
+            If some but not all the signed data objects share the same commitment,
+            one ObjectReference element must appear for each one of them.
+            However, if all the signed data objects share the same commitment,
+            the AllSignedDataObjects empty element must be present.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.ObjectReference.ObjectReferenceUri">
+            <summary>
+            Uri of the object reference
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.ObjectReference.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.ObjectReference.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.ObjectReference.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.ObjectReference.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.ObjectReferenceCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.ObjectReferenceCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.ObjectReferenceCollection.Add(SignatureXML.Library.ObjectReference)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.ObjectReferenceCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OCSPIdentifier">
+            <summary>
+            This class includes the name of the server that has produced the
+            referenced response (ResponderID element) and the time indication in
+            the "ProducedAt" field of the referenced response (ProducedAt element).
+            The optional URI attribute could serve to indicate where the OCSP
+            response identified is archived.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OCSPIdentifier.UriAttribute">
+            <summary>
+            The optional URI attribute could serve to indicate where the OCSP
+            response is archived
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OCSPIdentifier.ResponderID">
+            <summary>
+            The ID of the server that has produced the referenced response
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OCSPIdentifier.ProducedAt">
+            <summary>
+            Time indication in the referenced response
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPIdentifier.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPIdentifier.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPIdentifier.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPIdentifier.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OCSPRef">
+            <summary>
+            This class identifies one OCSP response
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OCSPRef.OCSPIdentifier">
+            <summary>
+            Identification of one OCSP response
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OCSPRef.CertDigest">
+            <summary>
+            The digest computed on the DER encoded OCSP response, since it may be
+            needed to differentiate between two OCSP responses by the same server
+            with their "ProducedAt" fields within the same second.
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPRef.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPRef.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPRef.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPRef.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OCSPRefCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OCSPRefCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPRefCollection.Add(SignatureXML.Library.OCSPRef)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPRefCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OCSPRefs">
+            <summary>
+            This class contains a collection of OCSPRefs
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OCSPRefs.OCSPRefCollection">
+            <summary>
+            Collection of OCSP refs
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPRefs.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPRefs.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPRefs.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPRefs.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OCSPValue">
+            <summary>
+            This class consist of a sequence of at least one OCSP Response. The
+            EncapsulatedOCSPValue element contains the base64 encoding of a
+            DER-encoded OCSP Response
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPValue.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="T:SignatureXML.Library.OCSPValueCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OCSPValueCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPValueCollection.Add(SignatureXML.Library.OCSPValue)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPValueCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OCSPValues">
+            <summary>
+            This class contains a collection of OCSPValues
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OCSPValues.OCSPValueCollection">
+            <summary>
+            Collection of OCSP values
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPValues.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPValues.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPValues.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.OCSPValues.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OtherCertificate">
+            <summary>
+            The OtherCertificate element is a placeholder for potential future
+            new formats of certificates
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OtherCertificate.AnyXmlElement">
+            <summary>
+            The generic XML element that represents any certificate
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OtherCertificate.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OtherCertificate.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OtherCertificate.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.OtherCertificate.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OtherCertificateCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OtherCertificateCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.OtherCertificateCollection.Add(SignatureXML.Library.OtherCertificate)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OtherCertificateCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OtherRef">
+            <summary>
+            Alternative forms of validation data can be included in this class
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OtherRef.AnyXmlElement">
+            <summary>
+            The generic XML element that represents any other type of ref
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OtherRef.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OtherRef.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OtherRef.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.OtherRef.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OtherRefCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OtherRefCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.OtherRefCollection.Add(SignatureXML.Library.OtherRef)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OtherRefCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OtherRefs">
+            <summary>
+            This class contains a collection of OtherRefs
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OtherRefs.OtherRefCollection">
+            <summary>
+            Collection of other refs
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OtherRefs.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OtherRefs.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OtherRefs.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.OtherRefs.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OtherValue">
+            <summary>
+            This class provides a placeholder for other revocation information
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OtherValue.AnyXmlElement">
+            <summary>
+            The generic XML element that represents any other value
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OtherValue.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OtherValue.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OtherValue.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.OtherValue.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OtherValueCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OtherValueCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.OtherValueCollection.Add(SignatureXML.Library.OtherValue)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OtherValueCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.OtherValues">
+            <summary>
+            This class contains a collection of OtherValues
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.OtherValues.OtherValueCollection">
+            <summary>
+            Collection of other values
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OtherValues.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.OtherValues.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.OtherValues.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.OtherValues.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.QualifyingProperties">
+            <summary>
+            The QualifyingProperties element acts as a container element for
+            all the qualifying information that should be added to an XML
+            signature
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.QualifyingProperties.Id">
+            <summary>
+            The optional Id attribute can be used to make a reference to the
+            QualifyingProperties container.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.QualifyingProperties.Target">
+            <summary>
+            The mandatory Target attribute refers to the XML signature with which the
+            qualifying properties are associated.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.QualifyingProperties.SignedProperties">
+            <summary>
+            The SignedProperties element contains a number of properties that are
+            collectively signed by the XMLDSIG signature
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.QualifyingProperties.UnsignedProperties">
+            <summary>
+            The UnsignedProperties element contains a number of properties that are
+            not signed by the XMLDSIG signature
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.QualifyingProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.QualifyingProperties.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.QualifyingProperties.LoadXml(System.Xml.XmlElement,System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+            <param name="counterSignedXmlElement">Element containing parent signature (needed if there are counter signatures)</param>
+        </member>
+        <member name="M:SignatureXML.Library.QualifyingProperties.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.RevocationValues">
+            <summary>
+            The RevocationValues element is used to hold the values of the
+            revocation information which are to be shipped with the XML signature
+            in case of an XML Advanced Electronic Signature with Extended
+            Validation Data (XAdES-X-Long). This is a unsigned property that
+            qualifies the signature. An XML electronic signature aligned with the
+            present document MAY contain at most one RevocationValues element.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.RevocationValues.Id">
+            <summary>
+            Optional Id for the XML element
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.RevocationValues.CRLValues">
+            <summary>
+            Certificate Revocation Lists
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.RevocationValues.OCSPValues">
+            <summary>
+            Responses from an online certificate status server
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.RevocationValues.OtherValues">
+            <summary>
+            Placeholder for other revocation information is provided for future
+            use
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.RevocationValues.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.RevocationValues.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.RevocationValues.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.RevocationValues.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SignaturePolicyId">
+            <summary>
+            The SignaturePolicyId element is an explicit and unambiguous identifier
+            of a Signature Policy together with a hash value of the signature
+            policy, so it can be verified that the policy selected by the signer is
+            the one being used by the verifier. An explicit signature policy has a
+            globally unique reference, which, in this way, is bound to an
+            electronic signature by the signer as part of the signature
+            calculation.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignaturePolicyId.SigPolicyId">
+            <summary>
+            The SigPolicyId element contains an identifier that uniquely
+            identifies a specific version of the signature policy
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignaturePolicyId.Transforms">
+            <summary>
+            The optional Transforms element can contain the transformations
+            performed on the signature policy document before computing its
+            hash
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignaturePolicyId.SigPolicyHash">
+            <summary>
+            The SigPolicyHash element contains the identifier of the hash
+            algorithm and the hash value of the signature policy
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignaturePolicyId.SigPolicyQualifiers">
+            <summary>
+            The SigPolicyQualifier element can contain additional information
+            qualifying the signature policy identifier
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignaturePolicyId.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignaturePolicyId.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SignaturePolicyId.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.SignaturePolicyId.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SignaturePolicyIdentifier">
+            <summary>
+            This class contains an identifier of a signature policy
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignaturePolicyIdentifier.SignaturePolicyId">
+            <summary>
+            The SignaturePolicyId element is an explicit and unambiguous identifier
+            of a Signature Policy together with a hash value of the signature
+            policy, so it can be verified that the policy selected by the signer is
+            the one being used by the verifier. An explicit signature policy has a
+            globally unique reference, which, in this way, is bound to an
+            electronic signature by the signer as part of the signature
+            calculation.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignaturePolicyIdentifier.SignaturePolicyImplied">
+            <summary>
+            The empty SignaturePolicyImplied element will appear when the
+            data object(s) being signed and other external data imply the
+            signature policy
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignaturePolicyIdentifier.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignaturePolicyIdentifier.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SignaturePolicyIdentifier.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.SignaturePolicyIdentifier.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SignatureProductionPlace">
+            <summary>
+            In some transactions the purported place where the signer was at the time
+            of signature creation may need to be indicated. In order to provide this
+            information a new property may be included in the signature.
+            This property specifies an address associated with the signer at a
+            particular geographical (e.g. city) location.
+            This is a signed property that qualifies the signer.
+            An XML electronic signature aligned with the present document MAY contain
+            at most one SignatureProductionPlace element.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignatureProductionPlace.City">
+            <summary>
+            City where signature was produced
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignatureProductionPlace.StateOrProvince">
+            <summary>
+            State or province where signature was produced
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignatureProductionPlace.PostalCode">
+            <summary>
+            Postal code of place where signature was produced
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignatureProductionPlace.CountryName">
+            <summary>
+            Country where signature was produced
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignatureProductionPlace.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignatureProductionPlace.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SignatureProductionPlace.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.SignatureProductionPlace.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SignatureTimeStampCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignatureTimeStampCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.SignatureTimeStampCollection.Add(SignatureXML.Library.TimeStamp)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SignatureTimeStampCollection.Add(System.String)">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <param name="tagName">Name of the tag when serializing into XML using GetXml()</param>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SignedDataObjectProperties">
+            <summary>
+            The SignedDataObjectProperties element contains properties that qualify
+            some of the signed data objects
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignedDataObjectProperties.DataObjectFormatCollection">
+            <summary>
+            Collection of signed data object formats
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignedDataObjectProperties.CommitmentTypeIndicationCollection">
+            <summary>
+            Collection of commitment type indications
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignedDataObjectProperties.AllDataObjectsTimeStampCollection">
+            <summary>
+            Collection of all data object timestamps
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignedDataObjectProperties.IndividualDataObjectsTimeStampCollection">
+            <summary>
+            Collection of individual data object timestamps
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignedDataObjectProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignedDataObjectProperties.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SignedDataObjectProperties.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.SignedDataObjectProperties.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SignedProperties">
+            <summary>
+            The SignedProperties element contains a number of properties that are
+            collectively signed by the XMLDSIG signature
+            </summary>
+        </member>
+        <member name="F:SignatureXML.Library.SignedProperties.DefaultSignedPropertiesId">
+            <summary>
+            Default value for the SignedProperties Id attribute
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignedProperties.Id">
+            <summary>
+            This Id is used to be able to point the signature reference to this
+            element.  It is initialized by default.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignedProperties.SignedSignatureProperties">
+            <summary>
+            The properties that qualify the signature itself or the signer are
+            included as content of the SignedSignatureProperties element
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignedProperties.SignedDataObjectProperties">
+            <summary>
+            The SignedDataObjectProperties element contains properties that qualify
+            some of the signed data objects
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignedProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignedProperties.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SignedProperties.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.SignedProperties.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SignedSignatureProperties">
+            <summary>
+            The properties that qualify the signature itself or the signer are
+            included as content of the SignedSignatureProperties element
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignedSignatureProperties.SigningTime">
+            <summary>
+            The signing time property specifies the time at which the signer
+            performed the signing process. This is a signed property that
+            qualifies the whole signature. An XML electronic signature aligned
+            with the present document MUST contain exactly one SigningTime element .
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignedSignatureProperties.SigningCertificate">
+            <summary>
+            The SigningCertificate property is designed to prevent the simple
+            substitution of the certificate. This property contains references
+            to certificates and digest values computed on them. The certificate
+            used to verify the signature shall be identified in the sequence;
+            the signature policy may mandate other certificates be present,
+            that may include all the certificates up to the point of trust.
+            This is a signed property that qualifies the signature. An XML
+            electronic signature aligned with the present document MUST contain
+            exactly one SigningCertificate.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignedSignatureProperties.SignaturePolicyIdentifier">
+            <summary>
+            The signature policy is a set of rules for the creation and
+            validation of an electronic signature, under which the signature
+            can be determined to be valid. A given legal/contractual context
+            may recognize a particular signature policy as meeting its
+            requirements.
+            An XML electronic signature aligned with the present document MUST
+            contain exactly one SignaturePolicyIdentifier element.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignedSignatureProperties.SignatureProductionPlace">
+            <summary>
+            In some transactions the purported place where the signer was at the time
+            of signature creation may need to be indicated. In order to provide this
+            information a new property may be included in the signature.
+            This property specifies an address associated with the signer at a
+            particular geographical (e.g. city) location.
+            This is a signed property that qualifies the signer.
+            An XML electronic signature aligned with the present document MAY contain
+            at most one SignatureProductionPlace element.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignedSignatureProperties.SignerRole">
+            <summary>
+            According to what has been stated in the Introduction clause, an
+            electronic signature produced in accordance with the present document
+            incorporates: "a commitment that has been explicitly endorsed under a
+            signature policy, at a given time, by a signer under an identifier,
+            e.g. a name or a pseudonym, and optionally a role".
+            While the name of the signer is important, the position of the signer
+            within a company or an organization can be even more important. Some
+            contracts may only be valid if signed by a user in a particular role,
+            e.g. a Sales Director. In many cases who the sales Director really is,
+            is not that important but being sure that the signer is empowered by his
+            company to be the Sales Director is fundamental.
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignedSignatureProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignedSignatureProperties.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SignedSignatureProperties.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.SignedSignatureProperties.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SignerRole">
+            <summary>
+            According to what has been stated in the Introduction clause, an
+            electronic signature produced in accordance with the present document
+            incorporates: "a commitment that has been explicitly endorsed under a
+            signature policy, at a given time, by a signer under an identifier,
+            e.g. a name or a pseudonym, and optionally a role".
+            While the name of the signer is important, the position of the signer
+            within a company or an organization can be even more important. Some
+            contracts may only be valid if signed by a user in a particular role,
+            e.g. a Sales Director. In many cases who the sales Director really is,
+            is not that important but being sure that the signer is empowered by his
+            company to be the Sales Director is fundamental.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignerRole.ClaimedRoles">
+            <summary>
+            The ClaimedRoles element contains a sequence of roles claimed by
+            the signer but not certified. Additional contents types may be
+            defined on a domain application basis and be part of this element.
+            The namespaces given to the corresponding XML schemas will allow
+            their unambiguous identification in the case these roles use XML.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SignerRole.CertifiedRoles">
+            <summary>
+            The CertifiedRoles element contains one or more wrapped attribute
+            certificates for the signer
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignerRole.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SignerRole.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SignerRole.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.SignerRole.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SigningCertificate">
+            <summary>
+            This class has as purpose to provide the simple substitution of the
+            certificate. It contains references to certificates and digest values
+            computed on them
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SigningCertificate.CertCollection">
+            <summary>
+            A collection of certs
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SigningCertificate.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SigningCertificate.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SigningCertificate.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.SigningCertificate.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SigPolicyQualifier">
+            <summary>
+            This class can contain additional information qualifying the signature
+            policy identifier
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SigPolicyQualifier.AnyXmlElement">
+            <summary>
+            The generic XML element that represents a sig policy qualifier
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SigPolicyQualifier.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SigPolicyQualifier.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SigPolicyQualifier.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.SigPolicyQualifier.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SigPolicyQualifierCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SigPolicyQualifierCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.SigPolicyQualifierCollection.Add(SignatureXML.Library.SigPolicyQualifier)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SigPolicyQualifierCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SigPolicyQualifiers">
+            <summary>
+            This class contains a collection of SigPolicyQualifiers
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SigPolicyQualifiers.SigPolicyQualifierCollection">
+            <summary>
+            A collection of sig policy qualifiers
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SigPolicyQualifiers.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SigPolicyQualifiers.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SigPolicyQualifiers.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.SigPolicyQualifiers.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SPUri">
+            <summary>
+            SPUri represents the URL where the copy of the Signature Policy may be
+            obtained.  The class derives from SigPolicyQualifier.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SPUri.Uri">
+            <summary>
+            Uri for the sig policy qualifier
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SPUri.AnyXmlElement">
+            <summary>
+            Inherited generic element, not used in the SPUri class
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SPUri.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SPUri.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SPUri.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.SPUri.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.SPUserNotice">
+            <summary>
+            SPUserNotice element is intended for being displayed whenever the
+            signature is validated.  The class derives from SigPolicyQualifier.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SPUserNotice.NoticeRef">
+            <summary>
+            The NoticeRef element names an organization and identifies by
+            numbers a group of textual statements prepared by that organization,
+            so that the application could get the explicit notices from a notices file.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SPUserNotice.ExplicitText">
+            <summary>
+            The	ExplicitText element contains the text of the notice to be displayed
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.SPUserNotice.AnyXmlElement">
+            <summary>
+            Inherited generic element, not used in the SPUserNotice class
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SPUserNotice.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.SPUserNotice.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.SPUserNotice.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.SPUserNotice.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.TimeStamp">
+            <summary>
+            This class contains timestamp information
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.TimeStamp.TagName">
+            <summary>
+            The name of the element when serializing
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.TimeStamp.HashDataInfoCollection">
+            <summary>
+            A collection of hash data infos
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.TimeStamp.EncapsulatedTimeStamp">
+            <summary>
+            The time-stamp generated by a TSA encoded as an ASN.1 data
+            object
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.TimeStamp.XMLTimeStamp">
+            <summary>
+            The time-stamp generated by a TSA encoded as a generic XML
+            timestamp
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.TimeStamp.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.TimeStamp.#ctor(System.String)">
+            <summary>
+            Constructor with TagName
+            </summary>
+            <param name="tagName">Name of the tag when serializing with GetXml</param>
+        </member>
+        <member name="M:SignatureXML.Library.TimeStamp.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.TimeStamp.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.TimeStamp.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.Transform2">
+            <summary>
+            The Transform element contains a single transformation
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.Transform2.Algorithm">
+            <summary>
+            Algorithm of the transformation
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.Transform2.XPath">
+            <summary>
+            XPath of the transformation
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.Transform2.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.Transform2.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.Transform2.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.Transform2.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.TransformCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.TransformCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.TransformCollection.Add(SignatureXML.Library.Transform2)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.TransformCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.Transforms">
+            <summary>
+            The Transforms element contains a collection of transformations
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.Transforms.TransformCollection">
+            <summary>
+            A collection of transforms
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.Transforms.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.Transforms.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.Transforms.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.Transforms.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.UnsignedDataObjectProperties">
+            <summary>
+            The UnsignedDataObjectProperties element may contain properties that
+            qualify some of the signed data objects.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedDataObjectProperties.UnsignedDataObjectPropertyCollection">
+            <summary>
+            A collection of unsigned data object properties
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedDataObjectProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedDataObjectProperties.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedDataObjectProperties.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedDataObjectProperties.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.UnsignedDataObjectProperty">
+            <summary>
+            This class contains properties that qualify some of the signed data
+            objects. The signature generated by the signer does not cover the content
+            of this element.
+            This information is added for the shake of completeness and to cope with
+            potential future needs for inclusion of such kind of properties.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedDataObjectProperty.AnyXmlElement">
+            <summary>
+            The generic XML element that represents an unsigned data object
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedDataObjectProperty.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedDataObjectProperty.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedDataObjectProperty.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedDataObjectProperty.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.UnsignedDataObjectPropertyCollection">
+            <summary>
+            Collection class that derives from ArrayList.  It provides the minimally
+            required functionality to add instances of typed classes and obtain typed
+            elements through a custom indexer.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedDataObjectPropertyCollection.Item(System.Int32)">
+            <summary>
+            New typed indexer for the collection
+            </summary>
+            <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedDataObjectPropertyCollection.Add(SignatureXML.Library.UnsignedDataObjectProperty)">
+            <summary>
+            Add typed object to the collection
+            </summary>
+            <param name="objectToAdd">Typed object to be added to collection</param>
+            <returns>The object that has been added to collection</returns>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedDataObjectPropertyCollection.Add">
+            <summary>
+            Add new typed object to the collection
+            </summary>
+            <returns>The newly created object that has been added to collection</returns>
+        </member>
+        <member name="T:SignatureXML.Library.UnsignedProperties">
+            <summary>
+            The UnsignedProperties element contains a number of properties that are
+            not signed by the XMLDSIG signature
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedProperties.Id">
+            <summary>
+            The optional Id attribute can be used to make a reference to the
+            UnsignedProperties element
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedProperties.UnsignedSignatureProperties">
+            <summary>
+            UnsignedSignatureProperties may contain properties that qualify XML
+            signature itself or the signer
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedProperties.UnsignedDataObjectProperties">
+            <summary>
+            The UnsignedDataObjectProperties element may contain properties that
+            qualify some of the signed data objects
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedProperties.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedProperties.LoadXml(System.Xml.XmlElement,System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+            <param name="counterSignedXmlElement">Element containing parent signature (needed if there are counter signatures)</param>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedProperties.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.UnsignedSignatureProperties">
+            <summary>
+            UnsignedSignatureProperties may contain properties that qualify XML
+            signature itself or the signer
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedSignatureProperties.CounterSignatureCollection">
+            <summary>
+            A collection of counter signatures
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedSignatureProperties.SignatureTimeStampCollection">
+            <summary>
+            A collection of signature timestamps
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedSignatureProperties.CompleteCertificateRefs">
+            <summary>
+            This clause defines the XML element containing the sequence of
+            references to the full set of CA certificates that have been used
+            to validate the electronic signature up to (but not including) the
+            signer's certificate. This is an unsigned property that qualifies
+            the signature.
+            An XML electronic signature aligned with the present document MAY
+            contain at most one CompleteCertificateRefs element.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedSignatureProperties.CompleteRevocationRefs">
+            <summary>
+            This clause defines the XML element containing a full set of
+            references to the revocation data that have been used in the
+            validation of the signer and CA certificates.
+            This is an unsigned property that qualifies the signature.
+            The XML electronic signature aligned with the present document
+            MAY contain at most one CompleteRevocationRefs element.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedSignatureProperties.RefsOnlyTimeStampFlag">
+            <summary>
+            Flag indicating if the RefsOnlyTimeStamp element (or several) is
+            present (RefsOnlyTimeStampFlag = true).  If one or more
+            sigAndRefsTimeStamps are present, RefsOnlyTimeStampFlag will be false.
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedSignatureProperties.SigAndRefsTimeStampCollection">
+            <summary>
+            A collection of sig and refs timestamps
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedSignatureProperties.RefsOnlyTimeStampCollection">
+            <summary>
+            A collection of refs only timestamps
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedSignatureProperties.CertificateValues">
+            <summary>
+            Certificate values
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedSignatureProperties.RevocationValues">
+            <summary>
+            Revocation values
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.UnsignedSignatureProperties.ArchiveTimeStampCollection">
+            <summary>
+            A collection of signature timestamp
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedSignatureProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedSignatureProperties.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedSignatureProperties.LoadXml(System.Xml.XmlElement,System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+            <param name="counterSignedXmlElement">Element containing parent signature (needed if there are counter signatures)</param>
+        </member>
+        <member name="M:SignatureXML.Library.UnsignedSignatureProperties.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.XadesObject">
+            <summary>
+            This class represents the unique object of a XAdES signature that
+            contains all XAdES information
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.XadesObject.Id">
+            <summary>
+            Id attribute of the XAdES object
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.XadesObject.QualifyingProperties">
+            <summary>
+            The QualifyingProperties element acts as a container element for
+            all the qualifying information that should be added to an XML
+            signature.
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.XadesObject.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.XadesObject.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.XadesObject.LoadXml(System.Xml.XmlElement,System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+            <param name="counterSignedXmlElement">Element containing parent signature (needed if there are counter signatures)</param>
+        </member>
+        <member name="M:SignatureXML.Library.XadesObject.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.XMLTimeStamp">
+            <summary>
+            This class contains a timestamp encoded as XML
+            </summary>
+        </member>
+        <member name="P:SignatureXML.Library.XMLTimeStamp.AnyXmlElement">
+            <summary>
+            The generic XML element that represents an XML timestamp
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.XMLTimeStamp.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.XMLTimeStamp.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:SignatureXML.Library.XMLTimeStamp.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+        </member>
+        <member name="M:SignatureXML.Library.XMLTimeStamp.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:SignatureXML.Library.CryptoSignedXmlRecursionException">
+            <summary>
+            This exception helps catch the signed XML recursion limit error.
+            This is being caught in the SignedXml class while computing the
+            hash. ComputeHash can throw different kind of exceptions.
+            This unique exception helps catch the recursion limit issue.
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.DSAKeyValue.GetXml">
+            <summary>
+            Create an XML representation.
+            </summary>
+            <remarks>
+            Based upon https://www.w3.org/TR/xmldsig-core/#sec-DSAKeyValue.
+            </remarks>
+            <returns>
+            An <see cref="T:System.Xml.XmlElement"/> containing the XML representation.
+            </returns>
+        </member>
+        <member name="M:SignatureXML.Library.DSAKeyValue.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Deserialize from the XML representation.
+            </summary>
+            <remarks>
+            Based upon https://www.w3.org/TR/xmldsig-core/#sec-DSAKeyValue.
+            </remarks>
+            <param name="value">
+            An <see cref="T:System.Xml.XmlElement"/> containing the XML representation. This cannot be null.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="value"/> cannot be null.
+            </exception>
+            <exception cref="T:System.Security.Cryptography.CryptographicException">
+            The XML has the incorrect schema or the DSA parameters are invalid.
+            </exception>
+        </member>
+        <member name="M:SignatureXML.Library.EncryptedXml.IsOverXmlDsigRecursionLimit">
+            <summary>
+            This method validates the _xmlDsigSearchDepthCounter counter
+            if the counter is over the limit defined by admin or developer.
+            </summary>
+            <returns>returns true if the limit has reached otherwise false</returns>
+        </member>
+        <member name="P:SignatureXML.Library.EncryptedXml.XmlDSigSearchDepth">
+            <summary>
+            Gets / Sets the max limit for recursive search of encryption key in signed XML
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.EncryptionPropertyCollection.System#Collections#IList#Add(System.Object)">
+            <internalonly/>
+        </member>
+        <member name="M:SignatureXML.Library.EncryptionPropertyCollection.System#Collections#IList#Contains(System.Object)">
+            <internalonly/>
+        </member>
+        <member name="M:SignatureXML.Library.EncryptionPropertyCollection.System#Collections#IList#IndexOf(System.Object)">
+            <internalonly/>
+        </member>
+        <member name="M:SignatureXML.Library.EncryptionPropertyCollection.System#Collections#IList#Insert(System.Int32,System.Object)">
+            <internalonly/>
+        </member>
+        <member name="M:SignatureXML.Library.EncryptionPropertyCollection.System#Collections#IList#Remove(System.Object)">
+            <internalonly/>
+        </member>
+        <member name="P:SignatureXML.Library.EncryptionPropertyCollection.System#Collections#IList#Item(System.Int32)">
+            <internalonly/>
+        </member>
+        <member name="P:SignatureXML.Library.HexConverter.CharToHexLookup">
+            <summary>Map from an ASCII char to its hex value, e.g. arr['b'] == 11. 0xFF means it's not a hex digit.</summary>
+        </member>
+        <member name="P:SignatureXML.Library.ReferenceList.System#Collections#IList#Item(System.Int32)">
+            <internalonly/>
+        </member>
+        <member name="M:SignatureXML.Library.RSAKeyValue.GetXml">
+            <summary>
+            Create an XML representation.
+            </summary>
+            <remarks>
+            Based upon https://www.w3.org/TR/xmldsig-core/#sec-RSAKeyValue.
+            </remarks>
+            <returns>
+            An <see cref="T:System.Xml.XmlElement"/> containing the XML representation.
+            </returns>
+        </member>
+        <member name="M:SignatureXML.Library.RSAKeyValue.LoadXml(System.Xml.XmlElement)">
+            <summary>
+            Deserialize from the XML representation.
+            </summary>
+            <remarks>
+            Based upon https://www.w3.org/TR/xmldsig-core/#sec-RSAKeyValue.
+            </remarks>
+            <param name="value">
+            An <see cref="T:System.Xml.XmlElement"/> containing the XML representation. This cannot be null.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="value"/> cannot be null.
+            </exception>
+            <exception cref="T:System.Security.Cryptography.CryptographicException">
+            The XML has the incorrect schema or the RSA parameters are invalid.
+            </exception>
+        </member>
+        <member name="P:SignatureXML.Library.SignedXml.SigningKeyName">
+            <internalonly/>
+        </member>
+        <member name="F:SignatureXML.Library.SignedXml.KnownSignatureStandard.XmlDsig">
+            <summary>
+            XML Digital Signature (XMLDSIG)
+            </summary>
+        </member>
+        <member name="F:SignatureXML.Library.SignedXml.KnownSignatureStandard.Xades">
+            <summary>
+            XML Advanced Electronic Signature (XAdES) 
+            </summary>
+        </member>
+        <member name="M:SignatureXML.Library.XmlDsigEnvelopedSignatureTransform.#ctor(System.Boolean)">
+            <internalonly/>
+        </member>
+    </members>
+</doc>

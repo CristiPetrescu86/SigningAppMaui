@@ -1,0 +1,12 @@
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignatureXML.Library\bin\Debug\net6.0-windows10.0.19041.0\SignatureXML.Library.deps.json
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignatureXML.Library\bin\Debug\net6.0-windows10.0.19041.0\SignatureXML.Library.dll
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignatureXML.Library\bin\Debug\net6.0-windows10.0.19041.0\SignatureXML.Library.pdb
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignatureXML.Library\obj\Debug\net6.0-windows10.0.19041.0\SignatureXML.Library.csproj.AssemblyReference.cache
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignatureXML.Library\obj\Debug\net6.0-windows10.0.19041.0\SignatureXML.Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignatureXML.Library\obj\Debug\net6.0-windows10.0.19041.0\SignatureXML.Library.AssemblyInfoInputs.cache
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignatureXML.Library\obj\Debug\net6.0-windows10.0.19041.0\SignatureXML.Library.AssemblyInfo.cs
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignatureXML.Library\obj\Debug\net6.0-windows10.0.19041.0\SignatureXML.Library.csproj.CoreCompileInputs.cache
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignatureXML.Library\obj\Debug\net6.0-windows10.0.19041.0\SignatureXML.Library.dll
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignatureXML.Library\obj\Debug\net6.0-windows10.0.19041.0\refint\SignatureXML.Library.dll
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignatureXML.Library\obj\Debug\net6.0-windows10.0.19041.0\SignatureXML.Library.pdb
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignatureXML.Library\obj\Debug\net6.0-windows10.0.19041.0\ref\SignatureXML.Library.dll

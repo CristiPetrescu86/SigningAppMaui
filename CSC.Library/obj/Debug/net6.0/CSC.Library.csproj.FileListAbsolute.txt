@@ -1,0 +1,12 @@
+C:\Users\cpetr\source\repos\SigningAppMAUI\CSC.Library\bin\Debug\net6.0\CSC.Library.deps.json
+C:\Users\cpetr\source\repos\SigningAppMAUI\CSC.Library\bin\Debug\net6.0\CSC.Library.dll
+C:\Users\cpetr\source\repos\SigningAppMAUI\CSC.Library\bin\Debug\net6.0\CSC.Library.pdb
+C:\Users\cpetr\source\repos\SigningAppMAUI\CSC.Library\obj\Debug\net6.0\CSC.Library.csproj.AssemblyReference.cache
+C:\Users\cpetr\source\repos\SigningAppMAUI\CSC.Library\obj\Debug\net6.0\CSC.Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cpetr\source\repos\SigningAppMAUI\CSC.Library\obj\Debug\net6.0\CSC.Library.AssemblyInfoInputs.cache
+C:\Users\cpetr\source\repos\SigningAppMAUI\CSC.Library\obj\Debug\net6.0\CSC.Library.AssemblyInfo.cs
+C:\Users\cpetr\source\repos\SigningAppMAUI\CSC.Library\obj\Debug\net6.0\CSC.Library.csproj.CoreCompileInputs.cache
+C:\Users\cpetr\source\repos\SigningAppMAUI\CSC.Library\obj\Debug\net6.0\CSC.Library.dll
+C:\Users\cpetr\source\repos\SigningAppMAUI\CSC.Library\obj\Debug\net6.0\refint\CSC.Library.dll
+C:\Users\cpetr\source\repos\SigningAppMAUI\CSC.Library\obj\Debug\net6.0\CSC.Library.pdb
+C:\Users\cpetr\source\repos\SigningAppMAUI\CSC.Library\obj\Debug\net6.0\ref\CSC.Library.dll

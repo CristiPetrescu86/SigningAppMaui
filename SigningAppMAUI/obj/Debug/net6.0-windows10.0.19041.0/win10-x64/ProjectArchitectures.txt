@@ -1,0 +1,4 @@
+C:\Users\cpetr\source\repos\SigningAppMAUI\CSC.Library\CSC.Library.csproj;neutral
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignaturePDF.Library\SignaturePDF.Library.csproj;neutral
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignatureXML.Library\SignatureXML.Library.csproj;neutral
+C:\Users\cpetr\source\repos\SigningAppMAUI\SigningAppMAUI\SigningAppMAUI.csproj;x64

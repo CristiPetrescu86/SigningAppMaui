@@ -1,0 +1,12 @@
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignaturePDF.Library\bin\Debug\net6.0-windows10.0.19041.0\SignaturePDF.Library.deps.json
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignaturePDF.Library\bin\Debug\net6.0-windows10.0.19041.0\SignaturePDF.Library.dll
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignaturePDF.Library\bin\Debug\net6.0-windows10.0.19041.0\SignaturePDF.Library.pdb
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignaturePDF.Library\obj\Debug\net6.0-windows10.0.19041.0\SignaturePDF.Library.csproj.AssemblyReference.cache
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignaturePDF.Library\obj\Debug\net6.0-windows10.0.19041.0\SignaturePDF.Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignaturePDF.Library\obj\Debug\net6.0-windows10.0.19041.0\SignaturePDF.Library.AssemblyInfoInputs.cache
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignaturePDF.Library\obj\Debug\net6.0-windows10.0.19041.0\SignaturePDF.Library.AssemblyInfo.cs
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignaturePDF.Library\obj\Debug\net6.0-windows10.0.19041.0\SignaturePDF.Library.csproj.CoreCompileInputs.cache
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignaturePDF.Library\obj\Debug\net6.0-windows10.0.19041.0\SignaturePDF.Library.dll
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignaturePDF.Library\obj\Debug\net6.0-windows10.0.19041.0\refint\SignaturePDF.Library.dll
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignaturePDF.Library\obj\Debug\net6.0-windows10.0.19041.0\SignaturePDF.Library.pdb
+C:\Users\cpetr\source\repos\SigningAppMAUI\SignaturePDF.Library\obj\Debug\net6.0-windows10.0.19041.0\ref\SignaturePDF.Library.dll

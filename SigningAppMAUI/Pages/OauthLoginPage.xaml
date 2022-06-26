@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SigningApp.Pages.OauthLoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="labelLoading" Text="Loading..." IsVisible="false" />
+            <WebView HeightRequest="1000" WidthRequest="1000" Source="https://msign-test.transsped.ro/csc/v0/oauth2/authorize?response_type=token&amp;client_id=ts_csc&amp;client_secret=h767ujHG654GHhgI&amp;redirect_uri=http://localhost:8080&amp;lang=en-US" Navigated="webviewNavigated" Navigating="webviewNavigating" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

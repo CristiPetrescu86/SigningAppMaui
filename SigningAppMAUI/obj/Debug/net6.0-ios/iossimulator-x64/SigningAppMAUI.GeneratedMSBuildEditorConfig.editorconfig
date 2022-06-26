@@ -1,0 +1,106 @@
+is_global = true
+build_property.TargetFramework = net6.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SigningAppMAUI
+build_property.ProjectDir = C:\Users\cpetr\source\repos\SigningAppMAUI\SigningAppMAUI\
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/Pages/KeyDetailsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.Pages.KeyDetailsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\KeyDetailsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\KeyDetailsPage.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/Pages/KeysInfo.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.Pages.KeysInfo.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\KeysInfo.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\KeysInfo.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/Pages/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.Pages.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\LoginPage.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/Pages/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.Pages.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MainPage.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/Pages/MultiplePDFSignPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.Pages.MultiplePDFSignPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MultiplePDFSignPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MultiplePDFSignPage.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/Pages/MultipleXMLSignPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.Pages.MultipleXMLSignPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MultipleXMLSignPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MultipleXMLSignPage.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/Pages/OauthLoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.Pages.OauthLoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\OauthLoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\OauthLoginPage.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/Pages/PDFSignPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.Pages.PDFSignPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\PDFSignPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\PDFSignPage.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/Pages/XMLSignPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.Pages.XMLSignPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\XMLSignPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\XMLSignPage.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/PopupPages/OauthOTPPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.PopupPages.OauthOTPPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = PopupPages\OauthOTPPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = PopupPages\OauthOTPPopup.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/PopupPages/OTPPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.PopupPages.OTPPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = PopupPages\OTPPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = PopupPages\OTPPopup.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/PopupPages/PINOTPPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.PopupPages.PINOTPPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = PopupPages\PINOTPPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = PopupPages\PINOTPPopup.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/PopupPages/PINPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.PopupPages.PINPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = PopupPages\PINPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = PopupPages\PINPopup.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/cpetr/source/repos/SigningAppMAUI/SigningAppMAUI/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SigningAppMAUI.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

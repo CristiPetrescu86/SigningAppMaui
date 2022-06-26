@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodel="clr-namespace:XamarinLicentaApp.ViewModel"
+             x:Class="XamarinLicentaApp.Pages.KeysInfo"
+             BackgroundColor="#F5F6F6">
+
+    <ContentPage.BindingContext>
+        <viewmodel:KeysInfoViewModel x:Name="vm"/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView Grid.Row="3" SelectionMode="Single" ItemsSource="{Binding Keys}"
+                            SelectedItem="{Binding KeySelected}"
+                            SelectionChanged="CollectionView_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical">
+                        <GridItemsLayout.Span>
+                            <OnPlatform x:TypeArguments="x:Int32">
+                                <On Platform="iOS" Value="1" />
+                                <On Platform="Android" Value="1" />
+                                <On Platform="UWP" Value="2"/>
+                            </OnPlatform>
+                        </GridItemsLayout.Span>
+                    </GridItemsLayout> 
+                </CollectionView.ItemsLayout>
+                <CollectionView.EmptyView>
+                    <Label Text="No Item found." TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid RowDefinitions="*, 2.5*" HeightRequest="260" BackgroundColor="White" Padding="15">
+                            <StackLayout Grid.Row="1" Orientation="Horizontal" VerticalOptions="FillAndExpand" 
+                                     HorizontalOptions="FillAndExpand" Padding="10,0,0,0">
+                                <Image Source="key.png"  WidthRequest="45" HorizontalOptions="Start"/>
+                                <StackLayout Padding="10,0,0,0" Spacing="5" VerticalOptions="CenterAndExpand">
+                                    <Label Text="{Binding credentialName}" TextColor="#2D2942" FontSize="14"/>
+                                    <Label Text="{Binding authMode, StringFormat='Key auth mode: {0:N}'}" TextColor="#2D2942" FontSize="12" Opacity="0.5"/>
+                                    <Label Text="{Binding multisign, StringFormat='Multisign supported: {0}'}" TextColor="#2D2942" FontSize="14" 
+                                           FontAttributes="Bold"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding key.status, StringFormat='Status: '}" TextColor="#2D2942" FontSize="12" Opacity="0.5"/>
+                                        <Image Source="{Binding key.status, StringFormat='{0}.png'}" HeightRequest="12"></Image>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
